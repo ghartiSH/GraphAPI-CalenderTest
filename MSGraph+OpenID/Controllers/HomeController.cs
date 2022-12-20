@@ -41,8 +41,8 @@ namespace MSGraph_OpenID.Controllers
 
             var queryOptions = new List<QueryOption>()
             {
-                new QueryOption("startdatetime", "2022-12-13T03:54:55.028Z"),
-                new QueryOption("enddatetime", "2022-12-20T03:54:55.028Z")
+                new QueryOption("startdatetime", DateTime.Now.ToString()),
+                new QueryOption("enddatetime", DateTime.Now.AddDays(7).ToString())
             };
 
             var calendarView = await graphServiceClient.Me.CalendarView
